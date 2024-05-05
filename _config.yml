@@ -11,7 +11,7 @@ keywords: 程序, 博客
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
-since: 2021
+since: 2022
 # 源码仓库，请替换成自己的
 repository: zzhiter/zzhiter.github.io
 # 对 css 和 js 资源的 cdn 加速配置
@@ -28,7 +28,7 @@ components:
     # 不蒜子访问统计
     busuanzi:
         enabled: true
-        start_date: 2021-05-03
+        start_date: 2022-05-03
     # My Popular Repositories
     side_bar_repo:
         enabled: false
@@ -168,10 +168,10 @@ beaudar:
     repo: mzlogin/blog-comments
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
-    repo: mzlogin/blog-comments
-    repo-id: MDEwOlJlcG9zaXRvcnk5MzEyNzkxNw==
+    repo: Zzhiter/blog-comments
+    repo-id: R_kgDOL3Wb9A
     category: Announcements
-    category-id: DIC_kwDOBY0E7c4CRtg9
+    category-id: DIC_kwDOL3Wb9M4CfJro
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
