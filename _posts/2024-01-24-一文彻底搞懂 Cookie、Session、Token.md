@@ -1,6 +1,6 @@
 ---
 authors: Zzhiter
-tags: [HTTP]
+categories: [HTTP]
 ---
 
 # 一文彻底搞懂 Cookie、Session、Token

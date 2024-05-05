@@ -1,6 +1,6 @@
 ---
 authors: Zzhiter
-tags: [Go]
+categories: [Go]
 ---
 
 Go doesn't support inheritance in the classical sense; instead, in encourages _composition_ as a way to extend the functionality of types. This is not a notion peculiar to Go. [Composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) is a known principle of OOP and is featured in the very first chapter of the _Design Patterns_ book.

@@ -2,7 +2,7 @@
 slug: Thought of by RequestBody annotation
 title: Thought of by RequestBody annotation
 authors: Zzhiter
-tags: [Java, Spring]
+categories: [Java, Spring]
 ---
 
 Java的内容还是多的。

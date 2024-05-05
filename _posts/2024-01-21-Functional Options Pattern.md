@@ -2,7 +2,7 @@
 slug: Functional Options Pattern
 title: Functional Options Pattern
 authors: Zzhiter
-tags: [Go, 设计模式]
+categories: [Go, 设计模式]
 ---
 
 # Functional Options Pattern

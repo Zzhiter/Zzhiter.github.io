@@ -2,7 +2,7 @@
 slug: Recover Force Push on Github
 title: Recover Force Push on Github
 authors: Zzhiter
-tags: [Github, Git]
+categories: [Github, Git]
 ---
 
 ## 背景

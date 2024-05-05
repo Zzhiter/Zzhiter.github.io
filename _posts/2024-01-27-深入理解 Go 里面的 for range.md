@@ -1,6 +1,6 @@
 ---
 authors: Zzhiter
-tags: [Go]
+categories: [Go]
 ---
 
 # 深入理解 Go 里面的 for range

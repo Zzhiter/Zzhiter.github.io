@@ -2,7 +2,7 @@
 slug: Dive into Context in Golang
 title: Dive into Context in Golang
 authors: Zzhiter
-tags: [Go]
+categories: [Go]
 ---
 
 # 引言
