@@ -11,7 +11,7 @@ Java的内容还是多的。
 
 # 由 RequestBody 注解想到的
 
-近日初学 SpringBoot 框架，Post 一个接口，返回了：
+近日复习 SpringBoot 框架，Post 一个接口，返回了：
 
 ```go
 2023-12-19T15:25:38.728+08:00  WARN 23508 --- [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------692495610520047406709727;charset=UTF-8' is not supported]
@@ -61,7 +61,7 @@ curl --location 'http://127.0.0.1:8080/api/v1/auth/register' \
 --data-raw '{
   "firstname": "zz",
   "lastname": "zz",
-  "email": "2631992879@qq.com",
+  "email": "261992879@qq.com",
   "password": "123456"
 }'
 ```
