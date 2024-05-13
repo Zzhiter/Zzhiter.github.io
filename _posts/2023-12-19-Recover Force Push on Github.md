@@ -17,7 +17,7 @@ categories: [Github, Git]
 
 我按照第二个老哥的方法去试，又按照 github 的官方 doc 修改 API 的参数，但是还是不行
 
-![](../images/YZLEb5438oLBJvxpO8hcXH2OnbA.png)
+![](/images/YZLEb5438oLBJvxpO8hcXH2OnbA.png)
 
 下面总结一下怎么恢复
 
@@ -116,7 +116,7 @@ categories: [Github, Git]
 
 直接找到当时那个 commit 对应的 push 信息，访问下面这个 URL。
 
-![](../images/IjPjbnBlLor0zCx5zmNctVPDng4.png)
+![](/images/IjPjbnBlLor0zCx5zmNctVPDng4.png)
 
 ## 找到 commit 信息里的 html_url
 
@@ -124,21 +124,21 @@ categories: [Github, Git]
 
 "html_url": "[https://github.com/YOUR_NAME/YOUR_NAME.github.io/commit/d3e142177d33de137566956bd8758b2ee77eaff2](https://github.com/YOUR_NAME/YOUR_NAME.github.io/commit/d3e142177d33de137566956bd8758b2ee77eaff2)"
 
-![](../images/UFu3b1LTMoQONYxm4fxcBjRWn3b.png)
+![](/images/UFu3b1LTMoQONYxm4fxcBjRWn3b.png)
 
 直接访问这个 URL，找到当时的 commit 记录：
 
-![](../images/KSAkboDLXo61Oqx8FpHc2YRFnyc.png)
+![](/images/KSAkboDLXo61Oqx8FpHc2YRFnyc.png)
 
 ## 找到当时的仓库所有文件的快照
 
 点击右边的 Browse files，Browse the repository at this point in the history。直接找到了当时的仓库快照：
 
-![](../images/M7UDbuXNBoq1JQx26NMcku0Cnsg.png)
+![](/images/M7UDbuXNBoq1JQx26NMcku0Cnsg.png)
 
 下载当时的代码：
 
-![](../images/Kb1JbgJFXoyi1Vxyx4YcpckvnVc.png)
+![](/images/Kb1JbgJFXoyi1Vxyx4YcpckvnVc.png)
 
 这下就都找回来了！
 

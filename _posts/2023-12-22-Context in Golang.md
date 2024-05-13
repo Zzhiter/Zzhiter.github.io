@@ -40,7 +40,7 @@ Context 是 Go 提供的一个包。让我们首先了解一些已经存在的�
 
 理解 Context 的核心是了解 Context 接口
 
-![](../images/IKVob7AGSooUjZx7kducsufhn1f.png)
+![](/images/IKVob7AGSooUjZx7kducsufhn1f.png)
 
 # 创建新的 **Context**
 
@@ -111,7 +111,7 @@ childCtx3 := context.WithValue(rootCtx, "user_id", "some_user_id)
 
 上面的三层树如下所示。
 
-![](../images/PX7AbWuRDoG7KGx86GzcP7P3nAg.png)
+![](/images/PX7AbWuRDoG7KGx86GzcP7P3nAg.png)
 
 由于它是一棵树，因此也可以为特定节点创建更多子节点。例如，我们可以从 childCtx1 派生出新的 context childCtx4。
 

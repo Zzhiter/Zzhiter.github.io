@@ -17,7 +17,7 @@ Cookie 使 Web 服务器能在用户的设备存储状态信息（如添加到�
 2. 浏览器看到有 `Set-Cookie` 字段以后就知道这是服务器给的身份标识，于是就保存起来，下次请求时会自动将此 `key=value` 值放入到 `Cookie` 字段中发给服务端。
 3. 服务端收到请求报文后，发现 `Cookie` 字段中有值，就能根据此值识别用户的身份然后提供个性化的服务。
 
-![](../images/Tr80bj7BBoEV1vxhjZ5cQ7xQnYc.png)
+![](/images/Tr80bj7BBoEV1vxhjZ5cQ7xQnYc.png)
 
 ### cookie 设置演示
 
@@ -33,15 +33,15 @@ public String cookies(HttpServletResponse response){
 
 项目启动以后我们输入路径 `http://localhost:8005/testCookies`，然后查看发的请求。可以看到下面那张图使我们首次访问服务器时发送的请求，可以看到服务器返回的响应中有 `Set-Cookie` 字段。而里面的 `key=value` 值正是我们服务器中设置的值。
 
-![](../images/FJynbDd6ioEN2GxlOficENKWndd.jpg)
+![](/images/FJynbDd6ioEN2GxlOficENKWndd.jpg)
 
 接下来我们再次刷新这个页面可以看到在请求体中已经设置了 `Cookie` 字段，并且将我们的值也带过去了。这样服务器就能够根据 `Cookie` 中的值记住我们的信息了。
 
-![](../images/FJu9bP6Ofo5h1XxLhZucbfHgnDd.jpg)
+![](/images/FJu9bP6Ofo5h1XxLhZucbfHgnDd.jpg)
 
 接下来我们换一个请求呢？是不是 `Cookie` 也会带过去呢？接下来我们输入路径 `http://localhost:8005` 请求。我们可以看到 `Cookie` 字段还是被带过去了。
 
-![](../images/HAspbmYjpo1dMXxnMxvcu4QTn4f.jpeg)
+![](/images/HAspbmYjpo1dMXxnMxvcu4QTn4f.jpeg)
 
 那么浏览器的 `Cookie` 是存放在哪呢？如果是使用的是 `Chrome` 浏览器的话，那么可以按照下面步骤。
 
@@ -55,7 +55,7 @@ public String cookies(HttpServletResponse response){
 
 其实就是很多 KV 对。
 
-![](../images/Larub3arFoLwbNxspw1crzc5neb.png)
+![](/images/Larub3arFoLwbNxspw1crzc5neb.png)
 
 ### **Cookie 中的参数设置**
 
@@ -67,13 +67,13 @@ public String cookies(HttpServletResponse response){
 
 设置为 `cookie.setPath("/testCookies")`，接下来我们访问 `http://localhost:8005/testCookies`，我们可以看到在左边和我们指定的路径是一样的，所以 `Cookie` 才在请求头中出现，接下来我们访问 `http://localhost:8005`，我们发现没有 `Cookie` 字段了，这就是 `Path` 控制的路径。
 
-![](../images/SqZobVbU3oxSqXxeu53c0CmbnLf.jpeg)
+![](/images/SqZobVbU3oxSqXxeu53c0CmbnLf.jpeg)
 
 #### **Domain**
 
 设置为 `cookie.setDomain("``localhost``")`，接下来我们访问 `http://localhost:8005/testCookies` 我们发现下图中左边的是有 `Cookie` 的字段的，但是我们访问 `http://172.16.42.81:8005/testCookies`，看下图的右边可以看到没有 `Cookie` 的字段了。这就是 `Domain` 控制的域名发送 `Cookie`。
 
-![](../images/U5iXbIlVroEsIZxkgIPc9vaZnn5.jpeg)
+![](/images/U5iXbIlVroEsIZxkgIPc9vaZnn5.jpeg)
 
 接下来的几个参数就不一一演示了，相信到这里大家应该对 `Cookie` 有一些了解了。
 
@@ -112,7 +112,7 @@ public String testGetSession(HttpSession session){
 
 这里我们写一个新的方法来测试 `Session` 是如何产生的，我们在请求参数中加上 `HttpSession session`，然后再浏览器中输入 `http://localhost:8005/testSession` 进行访问可以看到在服务器的**返回头中在****Cookie****中生成了一个****SessionId**。然后浏览器记住此 `SessionId` 下次访问时可以带着此 Id，然后就能根据此 Id 找到存储在服务端的信息了。
 
-![](../images/EfuIb2o5YomuY8x7pQEcSDFTnPh.jpeg)
+![](/images/EfuIb2o5YomuY8x7pQEcSDFTnPh.jpeg)
 
 所以可以看到，我们设置的 sessionID，是存放到 cookie 里面了。
 
@@ -151,18 +151,18 @@ curl 'https://ifs1y70.feishu.cn/space/api/user/?synced_block_host_token=BPoedGCh
 
 对应的 Cookie 列表
 
-![](../images/AYhwbEj8pogY9GxprJJc71QWn1d.png)
+![](/images/AYhwbEj8pogY9GxprJJc71QWn1d.png)
 
 Set-Cookie 之后，每次请求都会带上 Cookie。这叫基于 Cookie 的 Session，因为 SessionId 是存在 Cookie 里面的。
 
-![](../images/CHDJbyB1XoJ3nIxuDLycT2FSnsf.png)
+![](/images/CHDJbyB1XoJ3nIxuDLycT2FSnsf.png)
 
 继续上个请求，此时我们访问路径 `http://localhost:8005/testGetSession`，发现得到了我们上面存储在 `Session` 中的信息。那么 `Session` 什么时候过期呢？
 
 - 客户端：和 `Cookie` 过期一致，如果没设置，默认是关了浏览器就没了，即再打开浏览器的时候初次请求头中是没有 `SessionId` 了。
 - 服务端：服务端的过期是真的过期，即服务器端的 `Session` 存储的数据结构多久不可用了，默认是 30 分钟。
 
-![](../images/LIdobuKPeokVQNxWxP5cGetJnPf.jpeg)
+![](/images/LIdobuKPeokVQNxWxP5cGetJnPf.jpeg)
 
 既然我们知道了 `Session` 是在服务端进行管理的，那么或许你们看到这有几个疑问，`Session` 是在在哪创建的？`Session` 是存储在什么数据结构中？接下来带领大家一起看一下 `Session` 是如何被管理的。
 
@@ -226,11 +226,11 @@ protected Map<string, session> sessions = new ConcurrentHashMap<>();
 
 1. 将机器 A 上的 sessionId 复制到机器 B 上
 
-![](../images/VOSvbhlrNoghh5xAUPHcxiIwnNh.png)
+![](/images/VOSvbhlrNoghh5xAUPHcxiIwnNh.png)
 
 1. 将所有的 sessionId 存在单独一个机器上
 
-![](../images/RygUb9Xr8otb2Kxc8SocFnhMnoc.png)
+![](/images/RygUb9Xr8otb2Kxc8SocFnhMnoc.png)
 
 可以看到方案 1 的花销过于大。尤其对于千万级别用户的应用来说，将每个机器之间的 sessionId 同步，耗时耗力还不能保证准确性；方案 2 看似解决了方案 1 同步问题，但新的问题又随之而来，如果机器 C 宕机了，我岂不是拿不到数据，所有用户都要重新登录。
 
@@ -268,7 +268,7 @@ Payload 部分也是一个 JSON 对象，用来描述 Token 签发的时间/有�
 
 Signature 是对 Header 和 Payload 两部分，使用 alg（签名算法）得到的签名，用以验证数据一致，防止数据被篡改。最终，Header 和 Payload 部分，使用 Base64URL 转换为字符串；Signature 根据服务端指定的一个密钥，加上 Header 和 Payload 的转换后的字符串，再使用 alg 算法得到。
 
-![](../images/EPW7bKEuCoa3vtxBJLqcaoKSnNu.png)
+![](/images/EPW7bKEuCoa3vtxBJLqcaoKSnNu.png)
 
 ### 优点
 
@@ -283,11 +283,11 @@ Signature 是对 Header 和 Payload 两部分，使用 alg（签名算法）得�
 
 看一个 openai 的请求：
 
-![](../images/TPdEbBrz5oUR3Yx9rIicSrbRnII.png)
+![](/images/TPdEbBrz5oUR3Yx9rIicSrbRnII.png)
 
 Authorization 对应的 Value，Bearer 后面的就是对应的 JWT Token，解码出来的数据为：
 
-![](../images/KoFZbcHq9oyfYkxH43WcYZ6bnWc.png)
+![](/images/KoFZbcHq9oyfYkxH43WcYZ6bnWc.png)
 
 ### Refresh_token
 
@@ -333,7 +333,7 @@ cookie 这种特性根本不适合保存用户数据，因为当要存储多个�
 
 我登录成功后有个坏蛋截获 cookie 里的 session Id 或者 token，然后他的请求里带上这些凭证，是不是就可以冒充“我”，随便下单了？！
 
-![](../images/Fab6blOVDoINIFxO8JQclUd0nCe.webp)
+![](/images/Fab6blOVDoINIFxO8JQclUd0nCe.webp)
 
 首先在 https 普及的今天黑客想通过“拦截”的手段获取你的 token 几乎不可能，但是确实有黑客能够通过使用流氓软件的形式盗取你浏览器的 cookie 从而登录你的网站账号，但是如果是对安全性要求高的服务一般都会要求你进行二次验证。所以电脑不要裸奔并且安装来路不明的软件，虽说不至于盗取你的支付信息，但是拿你的 b 站账号乱发东西还是没问题的。
 

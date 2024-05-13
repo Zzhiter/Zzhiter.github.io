@@ -9,11 +9,11 @@ categories: [Go, 设计模式]
 
 最近在看 Hertz 的源码，发现也是用了这个模式，不过是定义成了：
 
-![](../images/DjhCbMzRfo8VlCxUOZpctpiWnDd.png)
+![](/images/DjhCbMzRfo8VlCxUOZpctpiWnDd.png)
 
 调用的时候需要多一层：
 
-![](../images/Ni7UbUMVBoYVLbxRQEhcd786nDd.png)
+![](/images/Ni7UbUMVBoYVLbxRQEhcd786nDd.png)
 
 其实是一样的，甚至可以定义一个别名：
 
