@@ -5,7 +5,7 @@ def replace_static_with_image(file_path):
         content = f.read()
     
     # Replace "static/" with "../image/"
-    new_content = content.replace('../images/', '/images/')
+    new_content = content.replace('static/', '/images/')
     
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
