@@ -125,7 +125,7 @@ for Ninit; Left; Right {
 
 与简单的经典循环相比，范围循环在 Go 语言中更常见、实现也更复杂。这种循环同时使用 `for` 和 `range` 两个关键字，编译器会在编译期间将所有 for-range 循环变成经典循环。从编译器的视角来看，就是将 `ORANGE` 类型的节点转换成 `OFOR` 节点:
 
-![](static/E3wtbmRomoDf1zxHIQYcY7Y8nFd.png)
+![](../images/E3wtbmRomoDf1zxHIQYcY7Y8nFd.png)
 
 **图 5-2 范围循环、普通循环和 SSA**
 

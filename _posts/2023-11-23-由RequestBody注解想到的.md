@@ -118,7 +118,7 @@ _   _boolean required() default true;
 
 他会根据请求的_content type，_去找到对应的 Converter，那我的原来的请求的 Content-Type 应该为 multipart/form-data，所以它应该去找 HttpMessageConverter 借口 form 相关的实现类
 
-![](static/EbuIb817woqxEuxwFFNchJeBn4f.png)
+![](../images/EbuIb817woqxEuxwFFNchJeBn4f.png)
 
 找到了，看下注释：
 
