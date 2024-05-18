@@ -19,7 +19,7 @@ def main():
         if filename.endswith('.md'):  # Process only markdown files
             file_path = os.path.join(blog_directory, filename)
             replace_static_with_image(file_path)
-            print(f"Replaced 'static/' with '../images/' in {filename}")
+            print(f"Replaced 'static/' with '/images/' in {filename}")
 
 if __name__ == "__main__":
     main()
